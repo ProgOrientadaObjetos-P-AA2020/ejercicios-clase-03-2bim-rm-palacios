@@ -14,10 +14,9 @@ public class Triangulo extends Figura {
     double base;
     double altura;
 
-    public Triangulo(String n, double bas, double al) {
+    public Triangulo(String n) {
         super(n);
-        base = bas;
-        altura = al;
+       
     }
 
     public void establecerBase(double b) {

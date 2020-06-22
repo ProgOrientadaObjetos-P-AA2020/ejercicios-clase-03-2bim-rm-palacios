@@ -109,7 +109,7 @@ public class EjecutaEstudiante {
                 estudianteD.establecerNumeroAsginaturas(numeroAsigs);
                 estudianteD.establecerCostoAsignatura(costoAsig);
 
-                // Se agrega al arreglo estudiantes un objeto de tipo
+                // Se agrega al arrayList estudiantes un objeto de tipo
                 // EstudianteDistancia
                 estudiantes.add(estudianteD);
             }

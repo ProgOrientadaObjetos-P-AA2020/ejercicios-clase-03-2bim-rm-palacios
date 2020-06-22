@@ -14,10 +14,9 @@ public class Rombo extends Figura {
     double diagonalMenor;
     double diagonalMayor;
 
-    public Rombo(String n, double dM, double dMay) {
+    public Rombo(String n) {
         super(n);
-        diagonalMenor = dM;
-        diagonalMayor = dMay;
+        
     }
 
     public void establecerDiagonalMenor(double men) {

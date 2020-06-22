@@ -13,9 +13,9 @@ public class Cuadrado extends Figura {
 
     double lado;
 
-    public Cuadrado(String n, double l) {
+    public Cuadrado(String n) {
         super(n);
-        lado = l;
+        
     }
 
     public void establecerLado(double l) {

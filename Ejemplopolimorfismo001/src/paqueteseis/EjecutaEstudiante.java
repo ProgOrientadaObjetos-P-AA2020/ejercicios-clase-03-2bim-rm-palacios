@@ -1,9 +1,7 @@
-
 package paqueteseis;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
 
 public class EjecutaEstudiante {
 
@@ -64,7 +62,8 @@ public class EjecutaEstudiante {
             if (tipoEstudiante == 1) {
 
                 // Declarar,crear e iniciar objeto tipo EstudiantePresencial
-                EstudiantePresencial estudianteP = new EstudiantePresencial();
+                EstudiantePresencial estudianteP = new EstudiantePresencial(
+                        nombresEst, apellidosEst);
                 // Solicitar ingreso de valores para variables 
                 // Solicitar numeroCreds, costoCred
                 // Leer numeroCreds, costoCred
@@ -74,8 +73,6 @@ public class EjecutaEstudiante {
                 costoCred = entrada.nextDouble();
                 // se hace uso de los métodos establecer para asignar valores
                 // a los datos (atributos) del objeto
-                estudianteP.establecerNombresEstudiante(nombresEst);
-                estudianteP.establecerApellidoEstudiante(apellidosEst);
                 estudianteP.establecerIdentificacionEstudiante(identificacionEst);
                 estudianteP.establecerEdadEstudiante(edadEst);
                 estudianteP.establecerNumeroCreditos(numeroCreds);
@@ -91,7 +88,8 @@ public class EjecutaEstudiante {
                 // crear un objeto de tipo EstudianteDistancia
 
                 // Declarar,crear e iniciar objeto tipo EstudianteDistancia
-                EstudianteDistancia estudianteD = new EstudianteDistancia();
+                EstudianteDistancia estudianteD = new EstudianteDistancia(
+                        nombresEst, apellidosEst);
                 // Solicitar ingreso de valores para variables 
                 // Solicitar numeroAsigs, costoAsig 
                 // Leer numeroAsigs, costoAsig
@@ -102,8 +100,6 @@ public class EjecutaEstudiante {
 
                 // se hace uso de los métodos establecer para asignar valores
                 // a los datos (atributos) del objeto
-                estudianteD.establecerNombresEstudiante(nombresEst);
-                estudianteD.establecerApellidoEstudiante(apellidosEst);
                 estudianteD.establecerIdentificacionEstudiante(identificacionEst);
                 estudianteD.establecerEdadEstudiante(edadEst);
                 estudianteD.establecerNumeroAsginaturas(numeroAsigs);
