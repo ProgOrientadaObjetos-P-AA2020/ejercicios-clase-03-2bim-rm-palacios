@@ -11,27 +11,44 @@ package paquetesiete;
  */
 public class Triangulo extends Figura {
 
-    int base;
-    int altura;
+    double base;
+    double altura;
 
-    public void establecerBase(int b) {
+    public Triangulo(String n, double bas, double al) {
+        super(n);
+        base = bas;
+        altura = al;
+    }
+
+    public void establecerBase(double b) {
         base = b;
     }
 
-    public void establecerAltura(int a) {
+    public void establecerAltura(double a) {
         altura = a;
     }
 
     @Override
     public void calcular_area() {
-        area = (base * altura)/2;
+        area = (base * altura) / 2;
     }
 
-    public int obtenerBase() {
+    public double obtenerBase() {
         return base;
     }
 
-    public int obtenerAltura() {
+    public double obtenerAltura() {
         return altura;
+    }
+
+    @Override
+    public String toString() {
+        String cadenaFinal = String.format("%s\n", super.toString());
+        cadenaFinal = String.format("%s"
+                + "Area: %.2f\n",
+                cadenaFinal,
+                area);
+
+        return cadenaFinal;
     }
 }

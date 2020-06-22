@@ -11,9 +11,14 @@ package paquetesiete;
  */
 public class Cuadrado extends Figura {
 
-    int lado;
+    double lado;
 
-    public void establecerLado(int l) {
+    public Cuadrado(String n, double l) {
+        super(n);
+        lado = l;
+    }
+
+    public void establecerLado(double l) {
         lado = l;
     }
 
@@ -22,7 +27,18 @@ public class Cuadrado extends Figura {
         area = lado * lado;
     }
 
-    public int obtenerLado() {
+    public double obtenerLado() {
         return lado;
+    }
+
+    @Override
+    public String toString() {
+        String cadenaFinal = String.format("%s\n", super.toString());
+        cadenaFinal = String.format("%s"
+                + "Area: %.2f\n",
+                cadenaFinal,
+                area);
+
+        return cadenaFinal;
     }
 }

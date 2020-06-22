@@ -11,28 +11,44 @@ package paquetesiete;
  */
 public class Rombo extends Figura {
 
-    int diagonalMenor;
-    int diagonalMayor;
+    double diagonalMenor;
+    double diagonalMayor;
 
-    public void establecerDiagonalMenor(int men) {
+    public Rombo(String n, double dM, double dMay) {
+        super(n);
+        diagonalMenor = dM;
+        diagonalMayor = dMay;
+    }
+
+    public void establecerDiagonalMenor(double men) {
         diagonalMenor = men;
     }
 
-    public void establecerDiagonalMayor(int may) {
+    public void establecerDiagonalMayor(double may) {
         diagonalMayor = may;
     }
 
     @Override
     public void calcular_area() {
-        area = (diagonalMayor * diagonalMenor)/2;
+        area = (diagonalMayor * diagonalMenor) / 2;
     }
 
-    public int obtenerDiagonalMenor() {
+    public double obtenerDiagonalMenor() {
         return diagonalMenor;
     }
 
-    public int obtenerDiagonalMayor() {
+    public double obtenerDiagonalMayor() {
         return diagonalMayor;
     }
 
+    @Override
+    public String toString() {
+        String cadenaFinal = String.format("%s\n", super.toString());
+        cadenaFinal = String.format("%s"
+                + "Area: %.2f\n",
+                cadenaFinal,
+                area);
+
+        return cadenaFinal;
+    }
 }

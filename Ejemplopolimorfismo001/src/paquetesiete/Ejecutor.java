@@ -32,76 +32,49 @@ public class Ejecutor {
          */
 
         // inicio de la solución
-        Scanner entrada = new Scanner(System.in);
-        int base;
-        int altura;
-        int lado;
-        int diagonalMenor;
-        int diagonalMayor;
-        int contador;
-        int tipoFigura;
         ArrayList<Figura> figuras = new ArrayList<>();
-        contador = 0;
-        int lim = 4;
-        while (contador <= lim) {
-            // Se imprime mensaje en pantalla para solicitar
-            // el tipo de estudiante que se desea ingresar
-            System.out.println("Tipo de Figura a registrar\n"
-                    + "Ingrese (1) para Cuadrado\n"
-                    + "Ingrese (2) para Rombo\n"
-                    + "Ingrese (3) para Triangulo");
-            // se captura el valor ingresado por el usuario en 
-            // la variable tipoEstudiante
-            tipoFigura = entrada.nextInt();
-            entrada.nextLine();
 
-            if (tipoFigura == 1) {
-                // Declarar,crear e iniciar objeto tipo Cuadrado
-                Cuadrado cuadrado = new Cuadrado();
-                System.out.println("Ingrese el valor del lado");
-                lado = entrada.nextInt();
-                // se hace uso de los métodos establecer para asignar valores
-                // a los datos (atributos) del objeto
-                cuadrado.establecerLado(lado);
+        // Declarar,crear e iniciar objeto tipo Cuadrado
+        Cuadrado cuadrados = new Cuadrado("Cuadrado", 3.5);
+        figuras.add(cuadrados);
 
-                // Se agrega al arrayList figuras un objeto de tipo
-                // cuadrado
-                figuras.add(cuadrado);
-            }
-            if (tipoFigura == 2) {
-                // Declarar,crear e iniciar objeto tipo Rombo
-                Rombo rombo = new Rombo();
-                System.out.println("Ingrese el valor de la diagonal mayor");
-                diagonalMayor = entrada.nextInt();
-                System.out.println("Ingrese el valor de la diagonal menor");
-                diagonalMenor = entrada.nextInt();
-                // se hace uso de los métodos establecer para asignar valores
-                // a los datos (atributos) del objeto
-                rombo.establecerDiagonalMayor(diagonalMayor);
-                rombo.establecerDiagonalMenor(diagonalMenor);
+        Cuadrado cuadrados2 = new Cuadrado("Cuadrado", 5);
+        figuras.add(cuadrados2);
 
-                // Se agrega al arrayList figuras un objeto de tipo
-                // rombo
-                figuras.add(rombo);
-            } else {
-                // Declarar,crear e iniciar objeto tipo Triangulo
-                Triangulo triangulo = new Triangulo();
-                System.out.println("Ingrese el valor de la base");
-                base = entrada.nextInt();
-                System.out.println("Ingrese el valor de la altura");
-                altura = entrada.nextInt();
-                // se hace uso de los métodos establecer para asignar valores
-                // a los datos (atributos) del objeto
-                triangulo.establecerBase(base);
-                triangulo.establecerAltura(altura);
+        Cuadrado cuadrados3 = new Cuadrado("Cuadrado", 8);
+        figuras.add(cuadrados3);
 
-                // Se agrega al arrayList figuras un objeto de tipo
-                // triangulo
-                figuras.add(triangulo);
-            }
+        Cuadrado cuadrados4 = new Cuadrado("Cuadrado", 2);
+        figuras.add(cuadrados4);
 
-            contador = contador + 1;
-        }
+         // Declarar,crear e iniciar objeto tipo Rombo
+        Rombo rombo = new Rombo("Rombo", 4, 5.6);
+        figuras.add(rombo);
+
+        Rombo rombo2 = new Rombo("Rombo", 8, 2);
+        figuras.add(rombo2);
+
+        Rombo rombo3 = new Rombo("Rombo", 5, 5.5);
+        figuras.add(rombo3);
+
+         // Declarar,crear e iniciar objeto tipo Triangulo
+        Triangulo trian1 = new Triangulo("Triangulo", 2, 5);
+        figuras.add(trian1);
+
+        Triangulo trian2 = new Triangulo("Triangulo", 4.5, 8);
+        figuras.add(trian2);
+
+        Triangulo trian3 = new Triangulo("Triangulo", 8, 8);
+        figuras.add(trian3);
+
+        Triangulo trian4 = new Triangulo("Triangulo", 2, 2);
+        figuras.add(trian4);
+        
+        Triangulo trian5 = new Triangulo("Triangulo", 8.5, 9);
+        figuras.add(trian5);
+        
+
+
 
         // proceso para comprobar el polimorfismo
         for (int i = 0; i < figuras.size(); i++) {
@@ -114,4 +87,3 @@ public class Ejecutor {
         }
     }
 }
-

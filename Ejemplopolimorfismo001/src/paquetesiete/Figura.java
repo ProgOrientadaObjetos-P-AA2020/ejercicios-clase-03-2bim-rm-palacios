@@ -11,11 +11,15 @@ package paquetesiete;
  */
 public abstract class Figura {
 
-    protected String caracteristicas;
+    protected String nombre;
     protected double area;
 
-    public void establecerCaracteristicas(String carac) {
-        caracteristicas = carac;
+    public Figura(String n) {
+        nombre = n;
+    }
+
+    public void establecerNombre(String carac) {
+        nombre = carac;
     }
 
     /*
@@ -25,8 +29,8 @@ public abstract class Figura {
      */
     public abstract void calcular_area();
 
-    public String obtenerCaracteristicas() {
-        return caracteristicas;
+    public String obtenerNombre() {
+        return nombre;
     }
 
     public double obtenerArea() {
@@ -35,10 +39,8 @@ public abstract class Figura {
 
     @Override
     public String toString() {
-        String cadena = String.format("Caracteristica: %s\n"
-                + "Area: %.2f\n",
-                caracteristicas,
-                area);
+        String cadena = String.format("Nombre: %s",
+                nombre);
 
         return cadena;
     }
